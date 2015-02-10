@@ -1,0 +1,13 @@
+.spinner(ng-hide="blocks.$resolved")
+  i.fa.fa-circle-o-notch.fa-spin.fa-4x
+.content(ng-class="{clicked: itemClicked}")
+  .portfolio
+    a.portfolio-block(ng-repeat="block in blocks" href="#/project/{{block.id}}")
+      .portfolio-block-background(style="background-image: url({{block.covers['404']}});" ng-if="block.covers['404']")
+      .portfolio-block-background(style="background-image: url({{block.covers['202']}});" ng-if="!block.covers['404']")
+      .portfolio-block-title {{block.name}}
+      .portfolio-block-new(ng-if="block.new")
+        span new
+  
+  button.btn.btn-cancel(ng-click="itemClicked = false")
+    i.fa.fa-times

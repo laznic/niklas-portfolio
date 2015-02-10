@@ -1,0 +1,13 @@
+.large-block-view
+  .col.large-block-view-image(ng-repeat="module in selected.modules" ng-if="module.type === 'image'")
+    img(ng-if="module.sizes.max_1240" ng-src="{{module.sizes['max_1240']}}")
+    img(ng-if="module.sizes.length === 0" ng-src="{{module.src}}")
+
+  .block.col.large-block-view-content
+    .block.large-block-view-title
+      | {{selected.name}}
+    .block.large-block-view-description
+      | {{selected.description}}
+  
+    a.btn.btn-cancel(href="#/")
+      i.fa.fa-times

@@ -1,0 +1,514 @@
+@import '_buttons'
+
+html, body
+  margin 0
+  padding 0
+  width 100%
+  height 100%
+
+body
+  font-family Helvetica, Arial, Verdana, sans-serif
+  font-size 12px
+  color #000
+  font-weight 200
+  // background #2c2633
+  background #d7d7d7
+
+h1
+h2
+  margin 0
+  padding 0
+
+*
+  box-sizing border-box
+
+a
+  text-decoration none
+  color #555
+
+.col
+.col-10
+.col-15
+.col-20
+.col-25
+.col-30
+.col-40
+.col-50
+.col-60
+.col-70
+.col-75
+.col-80
+.col-85
+.col-90
+  display inline-block
+  width 100%
+  vertical-align top
+  white-space normal
+  margin-right -4px
+  position relative
+
+.col-10
+  width 10%
+.col-15
+  width 15%
+.col-20
+  width 20%
+.col-25
+  width 25%
+.col-30
+  width 30%
+.col-40
+  width 40%
+.col-50
+  width 50%
+.col-60
+  width 60%
+.col-70
+  width 70%
+.col-75
+  width 75%
+.col-80
+  width 80%
+.col-85
+  width 85%
+.col-90
+  width 90%
+
+input[type="text"]
+  -webkit-appearance none
+  padding 10px 10px
+  font-size 16px
+  margin 0
+  border 1px solid #ccc
+  &:focus
+    outline none
+    border 1px solid #adadad
+    &::-webkit-input-placeholder
+        color transparent !important
+    &::-moz-input-placeholder
+        color transparent !important
+    &::-ms-input-placeholder
+        color transparent !important
+    &::input-placeholder
+        color transparent !important
+
+.red
+  color #ef3434
+  text-shadow 0px 1px 0px #c12222
+.green
+  color #A6CF57
+  text-shadow 0px 1px 0px #799b36
+
+.relative
+  position relative
+
+.block
+  display block
+
+.divider-horizontal
+  width 100%
+  border-bottom 1px dashed #ccc
+  margin 15px 0
+
+.margin-top-15
+  margin-top 15px
+
+.right
+  right 0
+  position absolute
+
+.container
+  width 100%
+  height 100%
+  position relative
+  white-space nowrap
+  overflow-x hidden
+  overflow-y auto
+  left 0
+  transition all 500ms ease-in-out
+  &.quote-shown
+    left 300px
+
+.page-container
+  position relative
+  width 100%
+  height 100%
+  &.show-page-2
+    .page-1
+      left -100%
+    .page-2
+      left 0
+  &.show-page-3
+    .page-1
+      top 100%
+    .page-3
+      top 0
+    & + .bottom-nav
+      bottom -100%
+  .page
+    position absolute
+    left 0
+    top 0
+    overflow hidden
+    display block
+    width 100%
+    height 100%
+    transition all 500ms ease-in-out
+  .page-2
+    left 100%
+    background #b0d369
+  .page-3
+    top -100%
+
+.checkbox
+  width 25px
+  height 25px
+  cursor pointer
+  z-index 100
+  opacity 0
+  position absolute
+
+.custom-checkbox
+  width 25px
+  height 25px
+  display inline-block
+  border 1px solid #ccc
+  position absolute
+  &.checked
+    &::after
+      display block
+      position absolute
+      content ''
+      background #A6CF57
+      width 15px
+      height 15px
+      top 4px
+      left 4px
+
+.sidebar
+  background #3d324b /* Old browsers */
+  // background -moz-linear-gradient(top,  #3d324b 18%, #ff4455 100%) /* FF3.6+ */
+  // background -webkit-gradient(linear, left top, left bottom, color-stop(18%,#3d324b), color-stop(100%,#ff4455)) /* Chrome,Safari4+ */
+  // background -webkit-linear-gradient(top,  #3d324b 18%,#ff4455 100%) /* Chrome10+,Safari5.1+ */
+  // background -o-linear-gradient(top,  #3d324b 18%,#ff4455 100%) /* Opera 11.10+ */
+  // background -ms-linear-gradient(top,  #3d324b 18%,#ff4455 100%) /* IE10+ */
+  // background linear-gradient(to bottom,  #3d324b 18%,#ff4455 100%) /* W3C */
+  width 250px
+  height 100%
+  color #fff
+  position fixed
+  z-index 2
+  a
+    color #fff
+
+.sidebar-placeholder
+  min-width 250px
+
+.profile
+  color #fff
+  display block
+  text-align center
+  padding 25px
+  position relative
+  // background #3d324b
+  .profile-background
+    position absolute
+    top 0
+    left 0
+    opacity 0.15
+    background #000
+    height 100%
+    width 100%
+    pointer-events none
+    z-index -1
+  .profile-image
+    margin 0 auto 25px
+    height 150px
+    display block
+    width 150px
+    border-radius 100%
+    background url(../media/niklas.png) no-repeat top center
+    background-size 100%
+    position relative
+    z-index 2
+  .profile-name
+    font-size 12px
+    h1
+      font-weight 200
+  .profile-title
+    display block
+    border-bottom 1px dashed #f7f7f7
+    border-top 1px dashed #f7f7f7
+    margin-bottom 10px
+    padding-bottom 10px
+    margin-top 10px
+    padding-top 10px
+    i
+      font-size 7px
+      vertical-align middle
+      color #ff4455
+      margin 0 5px
+  .profile-quote
+    position absolute
+    top 15px
+    right -15px
+    height 45px
+    width 45px
+    padding 7px
+    background #3d324b
+    cursor pointer
+    border-radius 100%
+    border 2px solid #fff
+    font-size 22px
+    &:hover
+      background #ff4455
+      border-color #ff4455
+    i
+      position relative
+      top 50%
+      transform translateY(-50%)
+
+.quote
+  position absolute
+  top 25px
+  right -475px
+  width 500px
+  background #f7f7f7
+  color #525252
+  padding 15px 25px
+  height auto
+  border-radius 10px
+  box-shadow 0 2px 15px rgba(0,0,0, 0.25)
+  z-index 1
+  text-align justify
+  transition all 350ms ease-in-out
+  opacity 0
+  transform scale(1)
+  &.ng-hide
+    top 0
+    right -300px
+    transform scale(0)
+  &.show
+    opacity 1
+    
+.nav
+  a
+    display block
+    width 100%
+    padding 25px
+    text-align left
+    position relative
+    &.active
+    &:hover
+      background #ff4455
+    i
+      position absolute
+      right 25px
+      top 50%
+      transform translateY(-50%)
+
+.certified
+  position absolute
+  bottom 0
+  height 200px
+  width 100%
+  .certified-link
+    display block
+    width 100%
+    height 100%
+    opacity 0.25
+    background url(../media/certified.png) no-repeat center center
+    &:hover
+      opacity 0.5
+
+.social
+  margin-top 15px
+  text-align center
+  width 100%
+  a 
+    display inline-block
+    width 20%
+    font-size 16px
+    color #f7f7f7
+    opacity 0.5
+    &:hover
+      opacity 1
+    i
+      display inline-block
+      vertical-align baseline
+
+.content
+.large-block-view
+  display inline-block
+  vertical-align top
+  white-space normal
+  margin-right -4px
+  position absolute
+  height 100%
+  width 100%
+  min-height 100%
+  padding 25px 25px 25px 275px
+  right 0
+  text-align left
+  z-index 1
+  &.clicked
+    left -100%
+
+
+.large-block-view
+  text-align left
+  padding-left 245px
+  padding-right 250px
+  padding-bottom 0
+  background #fff
+
+.large-block-view-image
+  width 100%
+  margin 0 auto
+  background #fff
+  text-align center !important
+  img
+    max-width 100%
+    height auto
+    margin 0
+    margin-bottom -4px
+
+.large-block-view-content
+  position fixed
+  top 0
+  background #fafafa
+  color #999
+  width 250px
+  right 0
+  height 100%
+  padding 25px
+  text-align justify
+
+.large-block-view-title
+  font-size 2em
+  border-bottom 1px solid #ccc
+  margin-bottom 10px
+  padding-bottom 5px
+
+.portfolio-block
+  width 100%
+  height 250px
+  margin-bottom 25px 
+  display inline-block
+  position relative
+  transition all 500ms ease-in-out
+  color #fff
+  text-align center
+  font-size 1.5em
+  vertical-align top
+  cursor pointer
+  border 10px solid #f7f7f7
+  box-shadow 0 1px 0px rgba(0,0,0, 0.2)
+  &:nth-child(even)
+    margin-right 0
+  &:hover
+    .portfolio-block-title
+      opacity 1
+      transform scale(1)
+  &.ng-enter-stagger
+    transition-delay 150ms
+    transition-duration 0ms
+  &.ng-enter
+    transform scale(0.75)
+    opacity 0
+  &.ng-enter-active
+    transform scale(1)
+    opacity 1
+.portfolio-block-background
+  background center top no-repeat
+  background-size cover
+  position absolute
+  width 100%
+  height 100%
+  opacity 1
+  transition all 250ms ease-in-out
+  &:hover
+    opacity 1
+
+
+.portfolio-block-title
+  background #ff4455
+  padding 35px 10px
+  position relative
+  width 80%
+  margin 0 auto
+  top 32%
+  opacity 0
+  transition all 250ms ease-in-out
+  transform translateY(-32%)
+  transform translateX(0px)
+  pointer-events none
+  transform scale(0.9)
+  box-shadow 0 2px 15px 0 rgba(0,0,0, 0.25)
+
+.portfolio-block-new
+  display block
+  width 0px
+  height 0px
+  position absolute
+  z-index 1
+  top 0
+  right 0
+  border-right 85px solid #ff4455
+  border-left 85px solid transparent
+  border-bottom 85px solid transparent
+  span
+    display inline-block
+    transform rotate(45deg)
+    position absolute
+    top 0
+    left 45px
+    right 0
+    margin 0 auto
+
+.spinner
+  color #f7f7f7
+  position absolute
+  left 250px
+  height 1px
+  text-align center
+  margin 0 auto
+  width 1px
+  right 0
+  transform translateY(-30%)
+  top 30%
+  transition all 250ms ease-in-out
+  &.ng-hide
+    opacity 0
+    color #ff4455
+    transform scale(0.9)
+    
+@media screen and (min-width 1024px)
+  .portfolio-block
+    width 49%
+    margin-right 2% 
+    margin-bottom 2%
+    &:nth-child(even)
+      margin-right 0
+
+@media screen and (min-width 1280px)
+  .portfolio-block
+    width 32%
+    margin-right 1.999% 
+    margin-bottom 1.999%
+    &:nth-child(even)
+      margin-right 1.999%
+    &:nth-child(3n)
+      margin-right 0
+
+@media screen and (min-width 1920px)
+  .portfolio-block
+    width 24%
+    margin-right 1.25% 
+    margin-bottom 1.25%
+    &:nth-child(even)
+      margin-right 1.25%
+    &:nth-child(3n)
+      margin-right 1.25%
+    &:nth-child(4n)
+      margin-right 0

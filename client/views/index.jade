@@ -1,0 +1,45 @@
+doctype html
+html(lang="en", ng-app='vikingApp')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE-edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+    title Niklas Lepistö
+    link(rel='stylesheet' href='public/css/font-awesome.min.css' media='screen')
+    link(rel='stylesheet' href='public/css/styles.css' media='screen')
+  body
+    .sidebar(ng-controller="sidebarController")
+      .profile
+        .profile-background
+        .profile-image
+          .profile-quote(ng-click="showQuote = !showQuote")
+            i.fa.fa-quote-left
+        .quote(ng-show="showQuote" ng-class="{show: showQuote}")
+          p Being a Business College Graduate in Information Technology and having a Bachelor's Degree in Business Information Systems, I’m able to understand today’s technology and business and make my own conclusions how things are run. Aside from that, I’m also a self-taught graphic & web designer, creating designs that really stand out from the rest. I’m not all about making-things-pretty, though. I also build what I design.
+          p Venturing into software development, I’m currently working as a Software Engineer, building complex mobile and web applications for prestigious clients. 
+          p Now, mix that with my creative, imaginative and open-minded personality and you get a person who really represents something new and fresh.
+
+
+
+
+        .profile-name
+          h1 Niklas Lepistö
+        .profile-title
+          span designer 
+            i.fa.fa-circle
+            |  developer
+        .social
+          a(ng-repeat="network in socialNetworks" href="{{network.url}}")
+            i.fa(class="fa-{{network.name}}")
+      .nav
+        a(href="public/media/niklas-lepisto-cv.pdf" download) 
+          i.fa.fa-download
+          |  Download CV
+
+      .certified
+        a.certified-link(href="https://vikingsofco.de/")
+
+     
+    .container(ng-view)
+    // script(type='text/javascript' src='public/media/masonry.min.js')
+    script(type='text/javascript' src='public/js/bundle.js')
