@@ -1,6 +1,6 @@
-# Vikings of Code - project template
+# My portfolio - WIP
 
-## Built with [Hapi](http://hapijs.com), [AngularJS](http://angularjs.com) and [Mongo](http://mongodb.org)
+## Built with [Hapi](http://hapijs.com) and [AngularJS](http://angularjs.com)
 ```
 git clone https://github.com/vikingsofcode/project-template.git <project name>
 cd <project name>
